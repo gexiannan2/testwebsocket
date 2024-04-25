@@ -1,0 +1,4 @@
+WebSocket/.vs/WebSocket/v17/ipch/AutoPCH/6b61a30257029a81/WEBSOCKET.ipch filter=lfs diff=lfs merge=lfs -text
+include/boost_1_85_0/bin.v2/libs/math/build/msvc-14.3/debug/link-static/threading-multi/pch.pch filter=lfs diff=lfs merge=lfs -text
+include/boost_1_85_0/stage/lib/libboost_wave-vc143-mt-gd-x64-1_85.lib filter=lfs diff=lfs merge=lfs -text
+WebSocket/.vs/WebSocket/v17/Browse.VC.db filter=lfs diff=lfs merge=lfs -text
