@@ -1,27 +1,40 @@
-<!DOCTYPE html>    
-<html>    
-<head>    
-<meta charset="UTF-8">  
-</head>    
-<body>    
-    <div>    
-        <input type="submit" value="Start" onclick="start()" />    
-    </div>    
-    <div id="messages"></div>    
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div>
+        <input type="submit" value="Start" onclick="start()" />
+    </div>
+    <div id="messages"></div>
     <script type="text/javascript">
-        var webSocket = new WebSocket('ws://localhost:9002');
+        var webSocket;
 
-        webSocket.onerror = function (event) {
-            onError(event)
-        };
+        function setupWebSocket() {
+            webSocket = new WebSocket('ws://localhost:9002');
 
-        webSocket.onopen = function (event) {
-            onOpen(event)
-        };
+            webSocket.onerror = function(event) {
+                onError(event);
+            };
 
-        webSocket.onmessage = function (event) {
-            onMessage(event)
-        };
+            webSocket.onopen = function(event) {
+                onOpen(event);
+            };
+
+            webSocket.onmessage = function(event) {
+                onMessage(event);
+            };
+
+            webSocket.onclose = function(event) {
+                console.log('WebSocket Closed: ', event);
+            };
+
+            window.onbeforeunload = function() {
+                // Close the WebSocket connection when the window is about to be unloaded.
+                webSocket.close();
+            };
+        }
 
         function onMessage(event) {
             document.getElementById('messages').innerHTML
@@ -34,14 +47,22 @@
         }
 
         function onError(event) {
-            alert(event.data);
-            alert("error");
+            // Using console.error instead of alert to avoid interrupting the user experience
+            console.error('WebSocket Error: ', event);
         }
 
         function start() {
-            webSocket.send('hello------------------------------------my name is gexiannan');
+            // Check if WebSocket is connected before sending the message
+            if (webSocket.readyState === WebSocket.OPEN) {
+                webSocket.send('hello------------------------------------my name is gexiannan');
+            } else {
+                console.error('WebSocket is not open.');
+            }
             return false;
         }
-    </script>    
-</body>    
+
+        // Call setupWebSocket to establish the connection when the page loads
+        setupWebSocket();
+    </script>
+</body>
 </html>
