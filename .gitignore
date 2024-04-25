@@ -5,5 +5,5 @@
 path include/boost_1_85_0/bin.v2
 
 # 忽略单个文件
-path WebSocket/.vs/WebSocket/v17/ipch/AutoPCH/6b61a30257029a81/WEBSOCKET.ipch  WebSocket/.vs/WebSocket/v17/Browse.VC.db  include/boost_1_85_0/bin.v2/libs/math/build/msvc-14.3/debug/link-static/threading-multi/pch.pchgit 
+path WebSocket/.vs/WebSocket/v17/ipch/AutoPCH/6b61a30257029a81/WEBSOCKET.ipch  WebSocket/.vs/WebSocket/v17/Browse.VC.db  include/boost_1_85_0/bin.v2/libs/math/build/msvc-14.3/debug/link-static/threading-multi/pch.pch include/boost_1_85_0/stage/lib/libboost_wave-vc143-mt-gd-x64-1_85.lib include/boost_1_85_0/bin.v2/libs/math/build/msvc-14.3/debug/link-static/threading-multi/pch.pch WebSocket/.vs/WebSocket/v17/Browse.VC.db WebSocket/.vs/WebSocket/v17/ipch/AutoPCH/6b61a30257029a81/WEBSOCKET.ipch
 
