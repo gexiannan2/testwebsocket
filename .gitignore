@@ -1,0 +1,9 @@
+# 忽略所有 .lib 文件
+*.lib
+
+# 忽略特定目录
+path include/boost_1_85_0/bin.v2
+
+# 忽略单个文件
+path WebSocket/.vs/WebSocket/v17/ipch/AutoPCH/6b61a30257029a81/WEBSOCKET.ipch  WebSocket/.vs/WebSocket/v17/Browse.VC.db  include/boost_1_85_0/bin.v2/libs/math/build/msvc-14.3/debug/link-static/threading-multi/pch.pchgit 
+
