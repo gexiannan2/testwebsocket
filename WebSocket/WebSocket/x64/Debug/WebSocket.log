@@ -1,0 +1,11 @@
+﻿  WebSocket.cpp
+C:\Users\Jump\source\repos\include\websocketpp-master\websocketpp\frame.hpp(834,13): warning C4267: “=”: 从“size_t”转换到“uint32_t”，可能丢失数据
+  (编译源文件“WebSocket.cpp”)
+  
+C:\Users\Jump\source\repos\include\websocketpp-master\websocketpp\common\md5.hpp(367,29): warning C4267: “+=”: 从“size_t”转换到“websocketpp::md5::md5_word_t”，可能丢失数据
+  (编译源文件“WebSocket.cpp”)
+  
+C:\Users\Jump\source\repos\include\websocketpp-master\websocketpp\sha1\sha1.hpp(176,24): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+  (编译源文件“WebSocket.cpp”)
+  
+  WebSocket.vcxproj -> C:\Users\Jump\source\repos\WebSocket\x64\Debug\WebSocket.exe
